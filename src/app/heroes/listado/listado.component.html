@@ -1,0 +1,60 @@
+<p>listado de heroes</p>
+<!-- forma chanta -->
+<!-- <ol>
+    <li>
+        {{heroes[0]}}
+    </li>
+    <li>
+        {{heroes[1]}}
+    </li>
+    <li>
+        {{heroes[2]}}
+    </li>
+    <li>
+        {{heroes[3]}}
+    </li>
+    <li>
+        {{heroes[4]}}
+    </li>
+</ol> -->
+
+<!-- directiva *ngFor -->
+<button (click)="borrarHeroe()">Borrar</button>
+<div *ngIf="heroeBorrado.length > 0"> <!-- si se deja en false, el bloque no va a aparecer -->
+    <h3>Heroe Borrado</h3>
+    <small>{{heroeBorrado}}</small>
+</div>
+
+<div *ngIf="heroeBorrado !== ''"> 
+    <h3>Heroe Borrado</h3>
+    <small>{{heroeBorrado}}</small>
+</div>
+
+<div *ngIf="heroeBorrado"> 
+    <h3>Heroe Borrado</h3>
+    <small>{{heroeBorrado}}</small>
+</div>
+
+<div *ngIf="!heroeBorrado"> 
+    No ha borrado nada
+</div>
+
+
+<!-- ngtemplate -->
+<div *ngIf="heroeBorrado; else noBorrado">  <!-- aca se hace referencia al ngtemplate creado y se crea un else dentro mismo del ngIf -->
+    <h3>Heroe Borrado</h3>
+    <small>{{heroeBorrado}}</small>
+</div>
+<ng-template #noBorrado>  <!-- aca se hace un ngtemplate y se le pone nombre #noBorrado -->
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+
+
+<ol>
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{heroe}}
+        {{i}}
+    </li>
+</ol>
+

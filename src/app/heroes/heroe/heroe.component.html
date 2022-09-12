@@ -1,0 +1,27 @@
+<h1>Heroe Component works</h1>
+<h1>{{nombre}}</h1>
+<dl>
+    <td>Nombre: </td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad: </td>
+    <dd>{{edad}}</dd>
+
+    <td>Función: </td>
+    <dd>{{obtenerNombre()}}</dd>
+
+    <td>Capitalizado: </td> <!-- aca lo ponen en mayuscula -->
+    <dd>{{obtenerNombre().toUpperCase()}}</dd>
+    <dd>{{nombre.toUpperCase()}}</dd>
+
+    <td>Capitalizado pero con el get: </td> <!-- los getter no se llaman como metodos ya que no lo son -->
+    <dd>{{nombreCapitalizado}}</dd>
+    
+    <button (click)="cambiarNombre()">
+        Cambiar heroe
+    </button>
+
+    <button (click)="cambiarEdad()">
+        Cambiar edad
+    </button>
+</dl>

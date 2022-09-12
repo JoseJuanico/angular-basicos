@@ -10,3 +10,6 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+
+  //dice a angualr el ambiente donde estamos coprriendo la app, nunca se modifica
